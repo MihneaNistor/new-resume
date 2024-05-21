@@ -5,6 +5,8 @@ import About from './components/About'
 import Experience from './components/Experience'
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
+
 
 
 
@@ -17,7 +19,7 @@ function App() {
      <h3>About Me</h3>
      <About/>
      <p className='small-text'>Explore My</p>
-     <h3>Experience</h3>
+     <h3>Skills</h3>
      <Experience />
      <p className='small-text'>Take a look at my</p>
      <h3>Latest Projects</h3>
@@ -25,6 +27,7 @@ function App() {
      <p className='small-text'>Get in Touch</p>
      <h3>Contact Me</h3>
      <Contact />
+     <Footer />
     </div>
 
   );

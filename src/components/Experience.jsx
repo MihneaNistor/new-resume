@@ -4,7 +4,7 @@ import ProgressBar from './ProgressBar';
 
 function Experience() {
   return (
-    <div>
+    <div id="experience">
       <ProgressBar />
     </div>
 

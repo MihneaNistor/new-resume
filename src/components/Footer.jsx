@@ -1,16 +1,17 @@
 import React from 'react'
 
-function Menu() {
+function Footer() {
   return (
-    <div className='menu'>
-        <ul>
+    <div className='footer'>
+        <div className='footer-menu'>
             <li><a href="#">About</a></li>
             <li><a href="#experience">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contacts">Contact</a></li>
-        </ul>
+        </div>
+        <p>Copyright&copy; 2024 Mihnea Nistor. All Rights Reserved</p>
     </div>
   )
 }
 
-export default Menu
+export default Footer

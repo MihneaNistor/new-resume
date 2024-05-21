@@ -5,7 +5,17 @@ body {
 
 .menu {
   background-color: #72A0C1;
-  height: 6em;
+  height: 4.5em;
+}
+
+.menu li a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu li a:hover {
+  color:#E5E4E2;
+  transition: all .5s ease;
 }
 
 .menu ul  {
@@ -14,10 +24,11 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   padding-top: 1em;
-  gap: 4em;
-  font-size: 1.6em;
-  margin-right: 5em;
+  gap: 3em;
+  font-size: 1.4em;
+  margin-right: 4em;
   margin-top: 0;
+  
 }
 
 .header {
@@ -26,8 +37,40 @@ body {
   justify-content: center;
   align-items: center;
   gap: 10em;
-  height: 60em;
-  margin-bottom: 8em;
+  min-height: 60em;
+  margin-bottom: 4em;
+}
+
+.cv {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.cv button:hover {
+  background-color: #22557b;
+  color: white;
+  transition: ease-in-out .5s;
+}
+
+.cv a {
+  background-color: #E5E4E2;
+  color: #22557b;
+}
+
+.icon {
+  font-size: 202px;
+  width: 12em;
+}
+
+.cv button {
+  width: 9.6em;
+  height: 3.5em;
+  border: 1px solid black;
+  border-radius: 25px;
+  font-size: .95em;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .header h1 {
@@ -68,15 +111,15 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 9em;
-  height: 50em;
+  min-height: 50em;
   margin-top: 10em;
 }
 
 .about .image {
-  height: 40em;
+  height: 42em;
   width: auto;
   border-radius: 5em;
-  margin-top: -9em;
+  margin-top: -5em;
 }
 
 .icon {
@@ -87,12 +130,13 @@ h3 {
 }
 
 .about .description {
-  width: 40em;
+  max-width: 40em;
   height: 22em;
   font-size: 1.5em;
   text-align: center;
   line-height: 2em;
-  margin-top: 3em;
+  margin-top: 2em;
+  font-weight: 400;
 }
 
 .experience {
@@ -124,7 +168,7 @@ h3 {
   padding-bottom: .8em;
 }
 
-.projects {
+#projects {
   display: flex;
   flex-direction: row;
   gap: 1.6em;
@@ -135,9 +179,8 @@ h3 {
   flex-direction: column;
   margin: 0 auto;
   padding-top: 2em;
-  gap: 5em;
-  width: 32em;
-  height: 28em;
+  max-width: 33em;
+  min-height: 31em;
   border: 2px solid black;
   border-radius: 9px;
   display: flex;
@@ -145,13 +188,14 @@ h3 {
 
 .project-block p {
   text-align: center;
-  margin: 0 1.5em;
+  margin: 0 1em;
+  line-height: 1.6em;
 }
 
 .project-block a {
   border: 2px solid black;
   width: 8em;
-  margin: 0 auto;
+  margin: auto auto 1em;
   font-size: 1.5em;
   text-align: center;
   text-decoration: none;
@@ -159,16 +203,14 @@ h3 {
   color: #72A0C1;
 }
 
-
-
 /* ------------PROGRESS BARS----------------- */
 
 .skills {
-  width: 55em;
+  width: 80em;
   margin: 60px auto;
   color: black;
   display: flex;
-  gap: 10em;
+  gap: 13em;
   margin-bottom: 10em;
 }
 
@@ -176,6 +218,8 @@ h3 {
   display: flex;
   flex-direction: column;
   margin: 20px 0;
+  font-size: 1.2em;
+  font-weight: 500;
 }
 
 .bar {
@@ -195,48 +239,38 @@ h3 {
   height: 18px;
   float: left;
   background: #2187e7;
+  width: 0;
+}
+.bar.animate .html {
+  animation: html 2.5s forwards;
 }
 
-.html {
-  width: 100%;
-  animation: html 4s;
+.bar.animate .css {
+  animation: css 2.5s forwards;
 }
 
-.css {
-  width: 100%;
-  animation: css 4s;
-
+.bar.animate .javascript {
+  animation: javascript 2.5s forwards;
 }
 
-.javascript  {
-  width: 80%;
-  animation: javascript 4s;
-
+.bar.animate .react {
+  animation: react 2.5s forwards;
 }
 
-.react {
-  width: 80%;
-  animation: react 4s;
+.bar.animate .typescript {
+  animation: typescript 2.5s forwards;
 }
 
-.typescript {
-  width: 60%;
-  animation: typescript 4s;
+.bar.animate .node {
+  animation: node 2.5s forwards;
 }
 
-.node {
-  width: 30%;
-  animation: node 4s;
+.bar.animate .sql {
+  animation: sql 2.5s forwards;
 }
 
-.sql {
-  width: 45%;
-  animation: sql 4s;
-}
-
-.git {
-  width: 65%;
-  animation: git 4s;
+.bar.animate .git {
+  animation: git 2.5s forwards;
 }
 
 @keyframes html {
@@ -264,7 +298,7 @@ h3 {
   }
 
   100% {
-      width: 80%;
+      width: 85%;
   }
 }
 @keyframes react {
@@ -282,7 +316,7 @@ h3 {
   }
 
   100% {
-      width: 60%;
+      width: 65%;
   }
 }
 @keyframes node {
@@ -300,7 +334,7 @@ h3 {
   }
 
   100% {
-      width: 45%;
+      width: 65%;
   }
 }
 @keyframes git {
@@ -315,3 +349,162 @@ h3 {
 
 /* ----------------------------- */
 
+
+#contacts {
+  display: flex;
+  flex-direction: row;
+  gap: 6em;
+  margin: 8em 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.contact a{
+  color:#2e5f85;
+  width: 6em;
+  height: 6em;
+  font-size: 22;
+}
+
+.contact h5 {
+  font-size: 1.3em;
+}
+
+.contact p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  justify-content: center;
+  list-style-type: none;
+  gap: 3em;
+  font-size: 1.6em;
+  margin-bottom: 2em;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-menu li a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-menu li a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1750px) {
+  .about {
+    gap: 1.5em;
+    margin-left: 0;
+  }
+  .experience {
+    gap: 1em;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .about {
+    flex-direction: column;
+  }
+
+  #projects {
+    gap: 1em;
+    margin-left: .3em;
+  }
+  .skills {
+    width: 60em;
+    gap: 11em;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .header {
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3em;
+  }
+  .experience {
+    flex-direction: column;
+    margin: 0 6em;
+  }
+  .description {
+    margin: 1em 2em;
+    min-height: 25em;
+  }
+  #projects {
+    flex-direction: column;
+  }
+  .project-block {
+    max-width: 50em;
+    min-height: 25em;
+  }
+  .skills {
+    width: 50em;
+    gap: 5em;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .menu ul{
+    gap: 2em;
+    margin-right: 1em;
+  }
+  .header {
+    gap: 3.5em;
+    margin-left: 1.5em;
+  }
+  .skills {
+    flex-direction: column;
+    gap: 1em;
+    width: 30em;
+  }
+  .skill {
+    margin: 0;
+  }
+  .description {
+    min-height: 30em;
+  }
+  #contacts {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .footer-menu {
+    gap: 1em;
+  }
+}
+
+@media screen and (max-width: 865px) {
+  .header {
+    gap: 1em;
+    margin-left: 1em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .header {
+    flex-direction: column;
+    gap: 0;
+    margin-top: 2em;
+  }
+
+  .title {
+    font-size: .8em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .description {
+    margin: 5em;
+    min-height: 40em;
+  }
+}
